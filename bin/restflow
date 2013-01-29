@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/restflow'
+
+include Restflow
+
+sequences = Sequences.new
+sequences.parse_flow_file(ARGV[0])
+
