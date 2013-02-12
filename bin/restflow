@@ -2,8 +2,6 @@
 
 require_relative '../lib/restflow'
 
-include Restflow
-
-sequences = Sequences.new
+sequences = Restflow::Sequences.new
 sequences.parse_flow_file(ARGV[0])
 
