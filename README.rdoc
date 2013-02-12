@@ -8,8 +8,10 @@ Simple DSL to assert your REST services
 
 == Usage
 
-Create a file that contains the sequences of REST calls
-containing assertions. Example:
+Create a file that contains the sequences of REST calls and
+add assertions to test the payloads you get back. 
+
+Example with a file name sequence.rb:
 
   base_url 'https://api.github.com'
 
@@ -29,7 +31,10 @@ containing assertions. Example:
   end
 
 
- 
+Then run on the file 
+
+  $ restflow sequence.rb
+
 == Copyright
 
 Copyright (c) 2013 simcap. See LICENSE.txt for
