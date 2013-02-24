@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+if ARGV.empty?
+  puts "File is missing. Usage:\n $ restflow file"
+  exit
+end
 
 require_relative '../lib/restflow'
 

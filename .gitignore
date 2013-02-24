@@ -8,6 +8,7 @@ rdoc
 # yard generated
 doc
 .yardoc
+*.html
 
 # bundler
 .bundle

@@ -1,4 +1,5 @@
 require_relative 'restflow/sequence'
+require_relative 'restflow/report'
 require 'httparty'
 require 'nokogiri'
 require 'rspec'

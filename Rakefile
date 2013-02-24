@@ -17,9 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "restflow"
   gem.homepage = "http://github.com/simcap/restflow"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "caplette@hotmail.co.uk"
+  gem.summary = %Q{Simple DSL to assert REST services}
+  gem.description = %Q{Simple DSL to assert REST services}
   gem.authors = ["simcap"]
   # dependencies defined in Gemfile
 end

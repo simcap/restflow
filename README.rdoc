@@ -1,6 +1,6 @@
 = Restflow
 
-Simple DSL to assert your REST services
+Simple DSL to assert REST services
 
 == Installation
 
