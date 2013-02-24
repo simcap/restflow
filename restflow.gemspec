@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "restflow"
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["simcap"]
@@ -27,7 +27,13 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/restflow",
     "lib/restflow.rb",
+    "lib/restflow/report.rb",
     "lib/restflow/sequence.rb",
+    "restflow.gemspec",
+    "samples/github_calls.rb",
+    "samples/local_server.rb",
+    "samples/local_sinatra_calls.rb",
+    "samples/new_user.json",
     "spec/restflow_spec.rb",
     "spec/spec_helper.rb"
   ]
