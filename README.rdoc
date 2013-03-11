@@ -39,7 +39,7 @@ A report file sequences-report.html will be generated in the current directory.
 
 === Examples 
 
-  GET asserting response code
+GET asserting response code
 
     sequence 'List all users' do
       get 'users'
@@ -51,7 +51,7 @@ A report file sequences-report.html will be generated in the current directory.
       status.should == 404  
     end
 
-  GET asserting json content
+GET asserting json content
 
     sequence 'List one users' do
       get 'users/1'
@@ -63,7 +63,7 @@ A report file sequences-report.html will be generated in the current directory.
       json['lastname'].should == "Helen"
     end
 
-  POST inline post data
+POST inline post data
 
     sequence 'Create new user' do
       post 'users', <<-BODY
@@ -76,7 +76,7 @@ A report file sequences-report.html will be generated in the current directory.
       json['lastname'].should == "Bond"
     end
 
-  POST post data from file 
+POST post data from file 
 
     sequence 'Create new user with body from file' do
       post 'users', :file => "new_user.json"
@@ -87,7 +87,7 @@ A report file sequences-report.html will be generated in the current directory.
       json['lastname'].should == "Marley"
     end
 
-  DELETE
+DELETE
 
     sequence 'Delete users' do
       delete 'users/3'
@@ -101,7 +101,7 @@ A report file sequences-report.html will be generated in the current directory.
       status.should == 404 
     end
 
-  Checking raw response content
+Checking raw response content
 
     sequence 'Error when creating' do
       post 'users', <<-BODY
