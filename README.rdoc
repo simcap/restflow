@@ -31,7 +31,7 @@ Example with a file name sequence.rb:
   end
 
 
-Then run on the file 
+Then run the restflow command 
 
   $ restflow sequence.rb
 
