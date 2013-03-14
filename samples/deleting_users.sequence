@@ -1,0 +1,13 @@
+base_url 'http://localhost:80'
+
+sequence 'Delete users' do
+  delete 'users/3'
+  status.should == 200
+  get 'users/3'
+  status.should == 404 
+
+  delete 'users/4'
+  status.should == 200
+  get 'users/4'
+  status.should == 404 
+end

@@ -1,0 +1,21 @@
+base_url 'http://localhost:80'
+
+sequence 'Create new user' do
+  post 'users', <<-BODY
+{"firstname":"James","lastname":"Bond"}
+  BODY
+  
+  get 'users/3'
+  status.should == 200 
+  json['firstname'].should == "James"
+  json['lastname'].should == "Bond"
+end
+
+sequence 'Create new user with body from file' do
+  post 'users', :file => "new_user.json"
+  
+  get 'users/4'
+  status.should == 200 
+  json['firstname'].should == "Bob"
+  json['lastname'].should == "Marley"
+end

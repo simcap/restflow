@@ -1,0 +1,25 @@
+base_url 'http://localhost:80'
+
+sequence 'List all users' do
+  get 'users'
+  json['1']['firstname'].should == "John"
+  json['2']['lastname'].should == "Helen"
+  status.should == 200
+end
+
+sequence 'List one users' do
+  get 'users/1'
+  json['firstname'].should == "John"
+  json['lastname'].should == "Doe"
+  status.should == 200
+
+  get 'users/2'
+  json['firstname'].should == "Sue"
+  json['lastname'].should == "Helen"
+  status.should == 200
+end
+
+sequence 'Cannot find user' do
+  get 'users/3'
+  status.should == 404  
+end

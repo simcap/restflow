@@ -1,0 +1,15 @@
+base_url 'http://localhost:80'
+
+sequence 'Error when creating' do
+  post 'users', <<-BODY
+{"firstname":"James"}
+  BODY
+    
+  response.should =~ /lastname is missing/
+
+  post 'users', <<-BODY
+{"lastname":"Bond"}
+  BODY
+
+  response.should =~ /firstname is missing/
+end

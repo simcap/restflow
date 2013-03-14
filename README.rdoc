@@ -11,6 +11,8 @@ Simple DSL to assert REST services
 Create a file that contains the sequences of REST calls and
 add assertions to test the payloads you get back. 
 
+The assertions for XML are done using Nokogiri. For json we use Ruby core json library.
+
 Example with a file name sequence.rb:
 
   base_url 'https://api.github.com'
