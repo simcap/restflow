@@ -59,7 +59,7 @@ describe "Restflow" do
 end
 
 def run_restflow_file(sequence_file_name)
-  full_path = File.expand_path("../../samples/#{sequence_file_name}", __FILE__)
+  full_path = File.expand_path("../../sequences/#{sequence_file_name}", __FILE__)
   sequences = Restflow::Sequences.new
   sequences.parse_flow_file(full_path)
 end
